@@ -12,235 +12,261 @@
 
 <body>
 
-    <header>
+<header>
 
-        <div class="top-line"></div>
+    <div class="top-line"></div>
 
-        <div class="header-content">
+    <div class="header-content">
 
-            <div class="house-mark">
-                B&amp;V
-            </div>
-
-            <div>
-                <h1>Blackwood &amp; Vale</h1>
-                <p>Historical Auction Records</p>
-            </div>
-
+        <div class="house-mark">
+            B&amp;V
         </div>
-
-        <nav>
-            <a href="#catalogues">CATALOGUES</a>
-            <a href="#records">RECORDS</a>
-            <a href="#about">ABOUT THE ARCHIVE</a>
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <section class="intro">
-
-            <p class="label">ESTABLISHED 1878 · LONDON</p>
-
-            <h2>
-                A record of objects,
-                collections and ownership.
-            </h2>
-
-            <p>
-                Digitised records from the historical catalogues
-                and private auction registers of Blackwood &amp; Vale.
-            </p>
-
-        </section>
-
-
-        <section class="search-panel">
-
-            <div>
-                <p class="label">ARCHIVE SEARCH</p>
-                <h3>Find a catalogue record</h3>
-            </div>
-
-            <div class="search-fields">
-
-                <input
-                    type="text"
-                    id="yearInput"
-                    placeholder="Year"
-                >
-
-                <input
-                    type="text"
-                    id="lotInput"
-                    placeholder="Lot number"
-                >
-
-                <button onclick="searchAuction()">
-                    SEARCH
-                </button>
-
-            </div>
-
-            <div id="searchResults"></div>
-
-        </section>
-
-
-        <section id="catalogues" class="catalogues">
-
-            <div class="section-title">
-
-                <p class="label">SELECTED RECORDS</p>
-
-                <span>ARCHIVE / 01</span>
-
-            </div>
-
-
-            <div class="record-list">
-
-                <article class="record">
-
-                    <div class="record-date">
-                        1907
-                    </div>
-
-                    <div class="record-info">
-
-                        <p>SPRING PRIVATE COLLECTION</p>
-
-                        <h3>European Decorative Arts</h3>
-
-                        <span>
-                            Catalogue B&amp;V–1907–04
-                        </span>
-
-                    </div>
-
-                    <div class="record-status">
-                        ARCHIVED
-                    </div>
-
-                </article>
-
-
-                <article class="record">
-
-                    <div class="record-date">
-                        1909
-                    </div>
-
-                    <div class="record-info">
-
-                        <p>AUTUMN CATALOGUE</p>
-
-                        <h3>Jewellery &amp; Precious Objects</h3>
-
-                        <span>
-                            Catalogue B&amp;V–1909–10
-                        </span>
-
-                    </div>
-
-                    <div class="record-status">
-                        ARCHIVED
-                    </div>
-
-                </article>
-
-
-                <article class="record target">
-
-                    <div class="record-date">
-                        1911
-                    </div>
-
-                    <div class="record-info">
-
-                        <p>PRIVATE AUCTION · 14 OCTOBER</p>
-
-                        <h3>Jewellery &amp; Precious Objects</h3>
-
-                        <span>
-                            Catalogue B&amp;V–1911–10
-                        </span>
-
-                    </div>
-
-                    <div class="record-status">
-                        <a href="lot-45.html">VIEW RECORD →</a>
-                    </div>
-
-                </article>
-
-
-                <article class="record">
-
-                    <div class="record-date">
-                        1913
-                    </div>
-
-                    <div class="record-info">
-
-                        <p>WINTER COLLECTION</p>
-
-                        <h3>Paintings &amp; Antiquities</h3>
-
-                        <span>
-                            Catalogue B&amp;V–1913–02
-                        </span>
-
-                    </div>
-
-                    <div class="record-status">
-                        ARCHIVED
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <section id="about" class="about">
-
-            <p class="label">ABOUT THE ARCHIVE</p>
-
-            <p>
-                The Blackwood &amp; Vale historical archive preserves
-                selected catalogues, lot descriptions and administrative
-                records from the firm's early years in London.
-            </p>
-
-            <p>
-                Some records remain incomplete. Catalogue numbers and
-                descriptions follow the terminology used in the surviving
-                documents.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
 
         <div>
-            BLACKWOOD &amp; VALE
+            <h1>Blackwood &amp; Vale</h1>
+            <p>Historical Auction Records</p>
         </div>
 
-        <span>
-            HISTORICAL AUCTION RECORDS · LONDON
-        </span>
+    </div>
 
-    </footer>
+    <nav>
+        <a href="#catalogues">CATALOGUES</a>
+        <a href="#records">RECORDS</a>
+        <a href="#about">ABOUT THE ARCHIVE</a>
+    </nav>
+
+</header>
 
 
-    <script src="script.js"></script>
+<main>
+
+    <section class="intro">
+
+        <p class="label">
+            ESTABLISHED 1878 · LONDON
+        </p>
+
+        <h2>
+            A record of objects,
+            collections and ownership.
+        </h2>
+
+        <p>
+            Digitised records from the historical catalogues
+            and private auction registers of Blackwood &amp; Vale.
+        </p>
+
+    </section>
+
+
+    <section class="search-panel">
+
+        <p class="label">ARCHIVE SEARCH</p>
+
+        <h3>Find a catalogue</h3>
+
+        <div class="search-fields">
+
+            <input
+                type="text"
+                id="yearInput"
+                placeholder="Enter year"
+            >
+
+            <button onclick="searchAuction()">
+                SEARCH
+            </button>
+
+        </div>
+
+        <div id="searchResults"></div>
+
+    </section>
+
+
+    <section id="catalogues" class="catalogues">
+
+        <div class="section-title">
+
+            <div>
+                <p class="label">SURVIVING CATALOGUES</p>
+                <h3>Historical Auction Records</h3>
+            </div>
+
+            <span>ARCHIVE / 01—04</span>
+
+        </div>
+
+
+        <div class="record-list">
+
+
+            <!-- 1907 -->
+
+            <article class="record">
+
+                <div class="record-date">
+                    1907
+                </div>
+
+                <div class="record-info">
+
+                    <p>SPRING PRIVATE COLLECTION</p>
+
+                    <h3>European Decorative Arts</h3>
+
+                    <span>
+                        Catalogue B&amp;V–1907–04
+                    </span>
+
+                </div>
+
+                <div class="record-status">
+
+                    <a href="catalogue-1907.html">
+                        VIEW CATALOGUE →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- 1909 -->
+
+            <article class="record">
+
+                <div class="record-date">
+                    1909
+                </div>
+
+                <div class="record-info">
+
+                    <p>AUTUMN CATALOGUE</p>
+
+                    <h3>Jewellery &amp; Precious Objects</h3>
+
+                    <span>
+                        Catalogue B&amp;V–1909–10
+                    </span>
+
+                </div>
+
+                <div class="record-status">
+
+                    <a href="catalogue-1909.html">
+                        VIEW CATALOGUE →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- 1911 -->
+
+            <article class="record">
+
+                <div class="record-date">
+                    1911
+                </div>
+
+                <div class="record-info">
+
+                    <p>PRIVATE AUCTION · 14 OCTOBER</p>
+
+                    <h3>Jewellery &amp; Precious Objects</h3>
+
+                    <span>
+                        Catalogue B&amp;V–1911–10
+                    </span>
+
+                </div>
+
+                <div class="record-status">
+
+                    <a href="catalogue-1911.html">
+                        VIEW CATALOGUE →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- 1913 -->
+
+            <article class="record">
+
+                <div class="record-date">
+                    1913
+                </div>
+
+                <div class="record-info">
+
+                    <p>WINTER COLLECTION</p>
+
+                    <h3>Paintings &amp; Antiquities</h3>
+
+                    <span>
+                        Catalogue B&amp;V–1913–02
+                    </span>
+
+                </div>
+
+                <div class="record-status">
+
+                    <a href="catalogue-1913.html">
+                        VIEW CATALOGUE →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <section id="about" class="about">
+
+        <p class="label">
+            ABOUT THE ARCHIVE
+        </p>
+
+        <p>
+            The Blackwood &amp; Vale historical archive preserves
+            selected catalogues, lot descriptions and administrative
+            records from the firm's early years in London.
+        </p>
+
+        <p>
+            Some records remain incomplete. Catalogue numbers and
+            descriptions follow the terminology used in the surviving
+            documents.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        BLACKWOOD &amp; VALE
+    </div>
+
+    <span>
+        HISTORICAL AUCTION RECORDS · LONDON
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 
