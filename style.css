@@ -577,3 +577,13 @@ footer span {
     }
 
 }
+.marginal-note {
+    margin: 8px 0 0;
+
+    color: #665541;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.3px;
+}
