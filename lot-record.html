@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blackwood & Vale — Lot Record</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="top-line"></div>
+
+    <div class="header-content">
+        <div class="house-mark">B&V</div>
+
+        <div>
+            <h1>Blackwood &amp; Vale</h1>
+            <p>Private Auction &amp; Collection Archives</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">ARCHIVE</a>
+        <a href="index.html">CATALOGUES</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <div class="back-link">
+        <a id="backLink" href="index.html">← BACK TO CATALOGUE</a>
+    </div>
+
+
+    <section class="record-page">
+
+        <p class="label" id="recordCategory">
+            AUCTION RECORD
+        </p>
+
+        <h2 id="recordTitle">
+            Lot Record
+        </h2>
+
+        <p class="record-subtitle" id="recordSubtitle"></p>
+
+
+        <div class="record-meta">
+
+            <div>
+                <span>LOT</span>
+                <strong id="lotNumber"></strong>
+            </div>
+
+            <div>
+                <span>YEAR</span>
+                <strong id="lotYear"></strong>
+            </div>
+
+            <div>
+                <span>CATALOGUE</span>
+                <strong id="catalogueRef"></strong>
+            </div>
+
+        </div>
+
+
+        <div class="record-divider"></div>
+
+
+        <section class="record-section">
+
+            <p class="label">DESCRIPTION</p>
+
+            <p id="description"></p>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <p class="label">PROVENANCE</p>
+
+            <p id="provenance"></p>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <p class="label">CATALOGUE NOTE</p>
+
+            <p id="catalogueNote"></p>
+
+        </section>
+
+
+        <section class="record-status-box">
+
+            <span>STATUS</span>
+
+            <strong id="status"></strong>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <p class="label">REGISTRAR'S NOTE</p>
+
+            <p id="registrarNote"></p>
+
+        </section>
+
+
+        <div class="record-footer">
+
+            <span id="footerReference"></span>
+
+            <span id="footerRegistrar"></span>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>BLACKWOOD &amp; VALE</div>
+
+    <span>PRIVATE COLLECTION &amp; AUCTION RECORDS</span>
+
+</footer>
+
+
+<script>
+
+const records = {
+
+    "1907-12": {
+        year: "1907",
+        lot: "12",
+        catalogue: "B&V–1907–04",
+        category: "European Decorative Arts",
+        title: "Pair of Delft Vases",
+        subtitle: "Blue and white earthenware, late nineteenth century",
+        description: "A matching pair of decorated Delft vases with floral panels and geometric borders.",
+        provenance: "Private English collection.",
+        note: "Presented as a matched pair. Minor surface wear noted.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "Condition examined prior to inclusion in the spring collection."
+    },
+
+    "1907-13": {
+        year: "1907",
+        lot: "13",
+        catalogue: "B&V–1907–04",
+        category: "European Decorative Arts",
+        title: "Walnut Writing Cabinet",
+        subtitle: "Carved walnut, fitted interior",
+        description: "A tall walnut writing cabinet with fitted drawers and a folding writing surface.",
+        provenance: "Estate of a private country residence.",
+        note: "Interior fittings complete.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "No alterations recorded."
+    },
+
+    "1907-14": {
+        year: "1907",
+        lot: "14",
+        catalogue: "B&V–1907–04",
+        category: "European Decorative Arts",
+        title: "Embroidered Wall Hanging",
+        subtitle: "Decorative textile",
+        description: "A finely embroidered wall hanging depicting a garden scene.",
+        provenance: "Private collection.",
+        note: "Mounted for exhibition purposes.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "Colours examined under natural light."
+    },
+
+    "1907-15": {
+        year: "1907",
+        lot: "15",
+        catalogue: "B&V–1907–04",
+        category: "Silver & Metalwork",
+        title: "Silver Table Centrepiece",
+        subtitle: "English silver, decorative form",
+        description: "An ornate silver table centrepiece supported by scrolling floral motifs.",
+        provenance: "Private family collection.",
+        note: "Weight recorded in the original catalogue.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "Hallmarks inspected and entered into the register."
+    },
+
+    "1907-16": {
+        year: "1907",
+        lot: "16",
+        catalogue: "B&V–1907–04",
+        category: "Clocks",
+        title: "Ormolu Mantel Clock",
+        subtitle: "Gilt-bronze case with enamel dial",
+        description: "A decorative mantel clock with gilt-bronze ornament and an enamel dial.",
+        provenance: "Private residence, Surrey.",
+        note: "Movement requires routine servicing.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "Clockmaker's report attached to the original file."
+    },
+
+    "1907-17": {
+        year: "1907",
+        lot: "17",
+        catalogue: "B&V–1907–04",
+        category: "Glass",
+        title: "Venetian Glass Decanter",
+        subtitle: "Clear and coloured glass",
+        description: "A Venetian glass decanter with slender neck and decorative coloured detailing.",
+        provenance: "Private collection.",
+        note: "Stopper present.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "No restoration recorded."
+    },
+
+    "1907-18": {
+        year: "1907",
+        lot: "18",
+        catalogue: "B&V–1907–04",
+        category: "Bronze",
+        title: "Bronze Study of a Horse",
+        subtitle: "Decorative bronze figure",
+        description: "A small bronze figure depicting a standing horse.",
+        provenance: "English private collection.",
+        note: "Mounted on a later wooden base.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "Base recorded separately in the inventory."
+    },
+
+    "1907-19": {
+        year: "1907",
+        lot: "19",
+        catalogue: "B&V–1907–04",
+        category: "Decorative Objects",
+        title: "Decorative Ivory Box",
+        subtitle: "Carved ivory with fitted interior",
+        description: "A small carved ivory box decorated with floral ornament.",
+        provenance: "Private collection.",
+        note: "Fitted interior remains intact.",
+        status: "RECORDED",
+        registrar: "E. Blackwood",
+        registrarNote: "Object entered into the collection register."
+    },
+
+
+    "1909-21": {
+        year: "1909",
+        lot: "21",
+        catalogue: "B&V–1909–10",
+        category: "Jewellery",
+        title: "Gold Signet Ring",
+        subtitle: "Gold ring with engraved crest",
+        description: "A heavy gold signet ring bearing an engraved heraldic device.",
+        provenance: "Private family collection.",
+        note: "Size recorded in the catalogue.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Inscription examined and recorded."
+    },
+
+    "1909-22": {
+        year: "1909",
+        lot: "22",
+        catalogue: "B&V–1909–10",
+        category: "Silver & Metalwork",
+        title: "Pair of Rococo Candlesticks",
+        subtitle: "Silver-plated decorative pair",
+        description: "A pair of Rococo-style candlesticks with scrolling ornament.",
+        provenance: "Private collection.",
+        note: "Presented as a matching pair.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Condition noted as satisfactory."
+    },
+
+    "1909-23": {
+        year: "1909",
+        lot: "23",
+        catalogue: "B&V–1909–10",
+        category: "Jewellery",
+        title: "Sapphire Pendant",
+        subtitle: "Gold setting with blue sapphire",
+        description: "A small sapphire pendant mounted in gold.",
+        provenance: "Private collection.",
+        note: "Stone examined under magnification.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Setting secure at time of examination."
+    },
+
+    "1909-24": {
+        year: "1909",
+        lot: "24",
+        catalogue: "B&V–1909–10",
+        category: "Personal Objects",
+        title: "Ivory Opera Glasses",
+        subtitle: "Ivory and gilt fittings",
+        description: "A compact pair of opera glasses with ivory casing and gilt fittings.",
+        provenance: "Private collection.",
+        note: "Lenses remain functional.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Optical condition noted in the register."
+    },
+
+    "1909-25": {
+        year: "1909",
+        lot: "25",
+        catalogue: "B&V–1909–10",
+        category: "Jewellery",
+        title: "Diamond Bar Brooch",
+        subtitle: "Late nineteenth-century jewellery",
+        description: "A slender bar brooch set with small diamonds.",
+        provenance: "Private English collection.",
+        note: "Pin fitting secure.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Stone count entered in the catalogue."
+    },
+
+    "1909-26": {
+        year: "1909",
+        lot: "26",
+        catalogue: "B&V–1909–10",
+        category: "Personal Objects",
+        title: "Gold Pocket Watch",
+        subtitle: "Gold case with enamel dial",
+        description: "A gold pocket watch with enamel dial and engraved case.",
+        provenance: "Private collection.",
+        note: "Movement running at time of examination.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Serial number entered into the register."
+    },
+
+    "1909-27": {
+        year: "1909",
+        lot: "27",
+        catalogue: "B&V–1909–10",
+        category: "Jewellery",
+        title: "Enamel Bracelet",
+        subtitle: "Decorative enamel work",
+        description: "A decorative bracelet with coloured enamel panels.",
+        provenance: "Private collection.",
+        note: "Minor wear to clasp.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Clasp inspected before catalogue preparation."
+    },
+
+    "1909-28": {
+        year: "1909",
+        lot: "28",
+        catalogue: "B&V–1909–10",
+        category: "Decorative Objects",
+        title: "Decorative Snuff Box",
+        subtitle: "Small gilt box",
+        description: "A small decorative snuff box with engraved lid.",
+        provenance: "Private collection.",
+        note: "Interior lining preserved.",
+        status: "RECORDED",
+        registrar: "A. Vale",
+        registrarNote: "Object photographed for the private catalogue."
+    },
+
+
+    "1911-45": {
+        year: "1911",
+        lot: "45",
+        catalogue: "B&V–1911–10",
+        category: "Jewellery & Precious Objects",
+        title: "An unidentified jewel",
+        subtitle: "Crystal and five diamonds",
+        description: "A rare and exceptionally valuable jewel consisting of a central crystal surrounded by five diamonds.",
+        provenance: "Private collection.",
+        note: "Presented for private consideration.",
+        status: "WITHDRAWN",
+        registrar: "A. Vale",
+        registrarNote: "The lot was withdrawn from the catalogue before the conclusion of the private auction. No sale was recorded."
+    }
+
+};
+
+
+const params = new URLSearchParams(window.location.search);
+
+const lotId = params.get("lot");
+
+const record = records[lotId];
+
+
+if (!record) {
+
+    document.getElementById("recordTitle").textContent =
+        "Record Not Found";
+
+    document.getElementById("recordSubtitle").textContent =
+        "No catalogue record was located for the requested entry.";
+
+    document.getElementById("description").textContent =
+        "The requested record could not be retrieved from the archive.";
+
+    document.getElementById("provenance").textContent =
+        "No information available.";
+
+    document.getElementById("catalogueNote").textContent =
+        "Archive reference unavailable.";
+
+    document.getElementById("status").textContent =
+        "UNAVAILABLE";
+
+    document.getElementById("registrarNote").textContent =
+        "No corresponding entry could be located.";
+
+} else {
+
+    document.title =
+        `Blackwood & Vale — Lot ${record.lot}`;
+
+    document.getElementById("recordCategory").textContent =
+        record.category;
+
+    document.getElementById("recordTitle").textContent =
+        record.title;
+
+    document.getElementById("recordSubtitle").textContent =
+        record.subtitle;
+
+    document.getElementById("lotNumber").textContent =
+        record.lot;
+
+    document.getElementById("lotYear").textContent =
+        record.year;
+
+    document.getElementById("catalogueRef").textContent =
+        record.catalogue;
+
+    document.getElementById("description").textContent =
+        record.description;
+
+    document.getElementById("provenance").textContent =
+        record.provenance;
+
+    document.getElementById("catalogueNote").textContent =
+        record.note;
+
+    document.getElementById("status").textContent =
+        record.status;
+
+    document.getElementById("registrarNote").textContent =
+        record.registrarNote;
+
+    document.getElementById("footerReference").textContent =
+        `B&V / ${record.year} / ${record.lot}`;
+
+    document.getElementById("footerRegistrar").textContent =
+        `REGISTERED BY ${record.registrar.toUpperCase()}`;
+
+    document.getElementById("backLink").href =
+        `catalogue-${record.year}.html`;
+}
+
+</script>
+
+</body>
+</html>
