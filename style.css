@@ -587,3 +587,283 @@ footer span {
     font-style: italic;
     letter-spacing: 0.3px;
 }
+/* =========================================
+   LOT 45 — SPECIAL ARCHIVE RECORD
+========================================= */
+
+.lot45-page {
+    max-width: 850px;
+    margin: 45px auto 0;
+    padding: 45px 50px;
+
+    background: #eee7d7;
+
+    border-top: 3px double #8d7654;
+    border-bottom: 3px double #8d7654;
+}
+
+
+/* Heading */
+
+.lot45-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.lot45-heading h2 {
+    margin: 7px 0 8px;
+
+    color: #30261d;
+
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.15;
+}
+
+.lot45-subtitle {
+    margin: 0;
+
+    color: #806b4e;
+
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+/* Lot number */
+
+.lot45-number {
+    min-width: 90px;
+
+    padding-left: 25px;
+
+    border-left: 1px solid #b9aa8e;
+}
+
+.lot45-number span {
+    display: block;
+
+    color: #806b4e;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.lot45-number strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #30261d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 44px;
+    font-weight: normal;
+}
+
+
+/* Metadata */
+
+.lot45-meta {
+    display: flex;
+    gap: 60px;
+
+    margin-top: 35px;
+    padding: 18px 0;
+
+    border-top: 1px solid #c4b79f;
+    border-bottom: 1px solid #c4b79f;
+}
+
+.lot45-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.lot45-meta span {
+    color: #806b4e;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.lot45-meta strong {
+    color: #4f4335;
+
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/* Divider */
+
+.lot45-divider {
+    height: 1px;
+
+    margin: 35px 0;
+
+    background: #b9aa8e;
+}
+
+
+/* Sections */
+
+.lot45-section {
+    margin-bottom: 30px;
+}
+
+.lot45-section > p:not(.label) {
+    max-width: 700px;
+
+    margin: 8px 0 0;
+
+    color: #4f4335;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* Status */
+
+.lot45-status {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+
+    margin: 5px 0 35px;
+
+    padding: 16px 25px;
+
+    background: #ded3bb;
+
+    border: 1px solid #a99575;
+}
+
+.lot45-status span {
+    color: #806b4e;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.lot45-status strong {
+    color: #594936;
+
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+
+/* Registrar's note */
+
+.lot45-registrar {
+    padding-top: 28px;
+
+    border-top: 1px solid #b9aa8e;
+}
+
+.lot45-registrar > p:not(.label) {
+    max-width: 700px;
+
+    margin: 8px 0 0;
+
+    color: #655746;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* Marginal note */
+
+.lot45-marginal {
+    margin-top: 38px;
+    padding: 18px 22px;
+
+    background: #e1d7c1;
+
+    border-left: 2px solid #8d7654;
+}
+
+.lot45-marginal > span {
+    display: block;
+
+    color: #806b4e;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.lot45-marginal > p {
+    margin: 9px 0 0;
+
+    color: #665541;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 13px;
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+
+/* Record footer */
+
+.lot45-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-top: 40px;
+    padding-top: 18px;
+
+    border-top: 1px solid #b9aa8e;
+
+    color: #867967;
+
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .lot45-page {
+        margin-top: 30px;
+        padding: 30px 25px;
+    }
+
+    .lot45-heading {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .lot45-heading h2 {
+        font-size: 32px;
+    }
+
+    .lot45-number {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .lot45-meta {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .lot45-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
