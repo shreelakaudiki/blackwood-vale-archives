@@ -417,3 +417,163 @@ footer span {
         flex-wrap: wrap;
     }
 }
+/* =========================
+   CATALOGUE PAGE
+   ========================= */
+
+.catalogue-note {
+    max-width: 700px;
+
+    margin-top: 45px;
+    padding: 25px 30px;
+
+    background: #ded3bb;
+
+    border-top: 1px solid #ad9b7c;
+    border-bottom: 1px solid #ad9b7c;
+}
+
+.catalogue-note p:not(.label) {
+    margin: 8px 0;
+
+    color: #655746;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   LOT CATALOGUE
+   ========================= */
+
+.lot-catalogue {
+    margin-top: 70px;
+}
+
+.lot-list {
+    margin-top: 10px;
+
+    border-top: 1px solid #b9aa8e;
+}
+
+.lot-entry {
+    display: grid;
+
+    grid-template-columns: 80px 1fr 140px;
+
+    align-items: center;
+
+    min-height: 105px;
+
+    padding: 18px 15px;
+
+    border-bottom: 1px solid #b9aa8e;
+
+    transition: background 0.2s ease;
+}
+
+.lot-entry:hover {
+    background: #ded3bb;
+}
+
+.lot-number {
+    color: #665541;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+}
+
+.lot-description {
+    padding-right: 25px;
+}
+
+.lot-description .category {
+    margin: 0 0 6px;
+
+    color: #806b4e;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.lot-description h4 {
+    margin: 0;
+
+    color: #33291f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.lot-description span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #867967;
+
+    font-size: 11px;
+}
+
+.lot-entry > a {
+    color: #594936;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+
+    text-align: right;
+
+    text-decoration: none;
+}
+
+.lot-entry > a:hover {
+    color: #30261d;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   BACK LINK
+   ========================= */
+
+.back-link {
+    margin-top: 45px;
+}
+
+.back-link a {
+    color: #594936;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CATALOGUE MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .lot-entry {
+        grid-template-columns: 55px 1fr;
+        gap: 8px;
+    }
+
+    .lot-entry > a {
+        grid-column: 2;
+
+        margin-top: 10px;
+
+        text-align: left;
+    }
+
+}
